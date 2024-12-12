@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: student-api
+    
+    
+
+    
+ 
+    
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: root
+    password: root
+    url: jdbc:h2:mem:suryacolleges;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+    
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+       
+    
+server:
+  port: 8083
+  shutdown: graceful
+
+
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
+        
+        
+        
+student:
+  page-size: 10
